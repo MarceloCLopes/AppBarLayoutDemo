@@ -11,7 +11,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
-    <com.google.android.material.appbar.CollapsingToolbarLayout
+   <!-- <com.google.android.material.appbar.CollapsingToolbarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#789"
@@ -25,17 +25,48 @@
         android:fitsSystemWindows="true"
         android:scaleType="centerCrop"
         app:layout_collapseMode="parallax"/>
-
+-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/transparent"
+        android:background="#789"
         app:title="@string/app_name"
-        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="scroll|snap"
         app:titleTextColor="#fff"/>
 
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#789"
+        app:title="@string/app_name"
+        app:layout_collapseMode="pin"
+        app:titleTextColor="#fff">
+
+      <com.google.android.material.tabs.TabLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:tabTextColor="#fff">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Two"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Three"/>
+
+      </com.google.android.material.tabs.TabLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    </com.google.android.material.appbar.CollapsingToolbarLayout>-->
 
   </com.google.android.material.appbar.AppBarLayout>
 
